@@ -159,11 +159,7 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-4 gap-2">
-                {["Светодиоды (кр./зел.)", "Резисторы 220 Ом", "Макетная плата", "Провода, USB-кабель"].map((c) => (
-                  <div key={c} className="px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-center text-xs text-white/50">{c}</div>
-                ))}
-              </div>
+
             </div>
           )}
 
