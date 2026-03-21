@@ -51,7 +51,7 @@ export default function Index() {
           {current === 0 && (
             <div className="flex flex-col items-center justify-center min-h-[500px] text-center">
               <div className="inline-block px-3 py-1 rounded-full border border-blue-500/40 text-blue-400 text-xs mb-8 font-mono">
-                Проект по информатике · 2026
+                Индивидуальный проект · 2026
               </div>
               <h1 className="text-5xl font-bold leading-tight mb-4 max-w-3xl">
                 Разработка системы автоматизации<br />
