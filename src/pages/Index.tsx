@@ -86,7 +86,7 @@ export default function Index() {
                   { icon: "DollarSign", color: "#ef4444", title: "Высокая стоимость", text: "Готовые системы (Xiaomi, Yandex) стоят от 5 000 до 50 000 ₽" },
                   { icon: "Cloud", color: "#f59e0b", title: "Зависимость от облака", text: "Коммерческие решения требуют интернета и серверов компании" },
                   { icon: "Lock", color: "#a855f7", title: "Нет гибкости", text: "Нельзя настроить под свои нужды или добавить нестандартные функции" },
-                  { icon: "Cpu", color: "#22c55e", title: "Наше решение", text: "Arduino позволяет сэкономить до 80% и получить полный контроль" },
+                  { icon: "Cpu", color: "#22c55e", title: "Наше решение", text: "Набор Arduino обошёлся всего в 2 500 ₽ — экономия до 80% по сравнению с готовыми системами" },
                 ].map((item, i) => (
                   <div key={i} className="p-5 rounded-2xl bg-white/5 border border-white/10 flex gap-4">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: item.color + "22" }}>
@@ -505,7 +505,7 @@ if (temp > 28) {
                 <Icon name="Cpu" size={36} className="text-blue-400" />
               </div>
               <h2 className="text-6xl font-bold mb-4">Спасибо за внимание!</h2>
-              <p className="text-white/40 text-xl mb-4">Вопросы приветствуются</p>
+
               <p className="text-white/25 text-sm mb-10">Проект «Умный дом на Arduino» · 2026</p>
               <div className="flex justify-center gap-3 flex-wrap">
                 {["Arduino Uno R3", "DHT11", "HC-SR04", "Реле", "C++", "Arduino IDE"].map((t) => (
