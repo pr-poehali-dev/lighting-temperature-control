@@ -251,7 +251,7 @@ export default function Index() {
                 {[
                   { url: PHOTOS.green_led, label: "Зелёный LED — человек рядом", dot: "green" },
                   { url: PHOTOS.red_led2, label: "Красный LED — нагрев пальцем", dot: "red" },
-                  { url: PHOTOS.working, label: "Полная работа устройства", dot: "both" },
+                  { url: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/4d58379a-ddaf-4782-b577-f11e6ff1bfcd.jpg", label: "Полная работа устройства", dot: "both" },
                 ].map((p, i) => (
                   <div key={i} className="rounded-xl overflow-hidden border border-white/10 group">
                     <div className="relative h-36 overflow-hidden">
@@ -407,7 +407,7 @@ if (temp > 28) {
                       </thead>
                       <tbody>
                         {[
-                          { name: "Мой проект (Arduino)", price: "[ваша цена] ₽", color: "#22c55e", bold: true },
+                          { name: "Мой проект (Arduino)", price: "2 500 ₽", color: "#22c55e", bold: true },
                           { name: "Xiaomi Starter Kit", price: "от 5 000 ₽", color: "#f59e0b", bold: false },
                           { name: "Яндекс Умный дом", price: "от 15 000 ₽", color: "#ef4444", bold: false },
                         ].map((row, i) => (
