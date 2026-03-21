@@ -59,8 +59,9 @@ export default function Index() {
               </h1>
               <p className="text-white/50 text-lg mb-10">на базе микроконтроллера Arduino</p>
               <div className="space-y-2 text-white/60 text-base mb-10">
-                <p>Выполнил: <span className="text-white/90">[Ваше имя], группа [№ группы]</span></p>
-                <p>Преподаватель: <span className="text-white/90">[ФИО преподавателя]</span></p>
+                <p>Выполнил: <span className="text-white/90">Тюнин Алексей Игоревич</span></p>
+                <p>Школа №ЭДИС-251/21А</p>
+                <p>Преподаватель: <span className="text-white/90">Кардапольцева Ульяна Сергеевна</span></p>
               </div>
               <div className="flex gap-2 flex-wrap justify-center">
                 {["Arduino Uno", "DHT11", "HC-SR04", "Реле", "C++"].map((t) => (
