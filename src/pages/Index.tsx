@@ -4,10 +4,10 @@ import Icon from "@/components/ui/icon";
 const PHOTOS = {
   assembled1: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/68fd8c13-4f2b-40d2-aa71-2ee478f29a21.jpg",
   assembled2: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/dfcdd5a0-e0f7-432d-8a68-de8140a91d03.jpg",
-  kit_box: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/c8da77f0-6330-41b6-bbc9-ab94462b4c09.png",
+  kit_box: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/efa4f19f-edca-45d3-ac0e-87aba79749e0.jpg",
   kit_spread: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/2c7b949f-e7f6-447c-b71e-ad05b240f35a.jpg",
   arduino: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/d18b5eaa-9df8-4852-a265-9ff665774f07.jpg",
-  dht11: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/015bd786-d02a-4ea5-bbad-b9d01a2e80fc.jpg",
+  dht11: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/200fba0b-19db-46d0-931a-6c84af47f8d8.jpg",
   hcsr04: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/a0538f7b-4537-46d1-a59a-1d30b40f8010.jpg",
   relay: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/30e80a09-eb19-4c4c-8d09-6702531be710.jpg",
   breadboard: "https://cdn.poehali.dev/projects/2f5b3a5e-e68a-49d3-9344-52c25d82c7cf/bucket/7113582e-f319-4004-b555-86908cb7a2a0.jpg",
@@ -49,28 +49,23 @@ export default function Index() {
 
           {/* ── СЛАЙД 1: Титульный ── */}
           {current === 0 && (
-            <div className="grid grid-cols-2 gap-10 items-center min-h-[500px]">
-              <div>
-                <div className="inline-block px-3 py-1 rounded-full border border-blue-500/40 text-blue-400 text-xs mb-6 font-mono">
-                  Проект по информатике · 2026
-                </div>
-                <h1 className="text-5xl font-bold leading-tight mb-3">
-                  Разработка системы автоматизации<br />
-                  <span className="text-blue-400">«Умный дом»</span>
-                </h1>
-                <p className="text-white/50 text-base mb-2">на базе микроконтроллера Arduino</p>
-                <div className="mt-8 space-y-1 text-white/60 text-sm">
-                  <p>Выполнил: <span className="text-white/90">[Ваше имя], группа [№ группы]</span></p>
-                  <p>Преподаватель: <span className="text-white/90">[ФИО преподавателя]</span></p>
-                </div>
-                <div className="flex gap-2 mt-6 flex-wrap">
-                  {["Arduino Uno", "DHT11", "HC-SR04", "Реле", "C++"].map((t) => (
-                    <span key={t} className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-white/50 text-xs">{t}</span>
-                  ))}
-                </div>
+            <div className="flex flex-col items-center justify-center min-h-[500px] text-center">
+              <div className="inline-block px-3 py-1 rounded-full border border-blue-500/40 text-blue-400 text-xs mb-8 font-mono">
+                Проект по информатике · 2026
               </div>
-              <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                <img src={PHOTOS.assembled1} alt="Устройство" className="w-full h-full object-cover" />
+              <h1 className="text-5xl font-bold leading-tight mb-4 max-w-3xl">
+                Разработка системы автоматизации<br />
+                <span className="text-blue-400">«Умный дом»</span>
+              </h1>
+              <p className="text-white/50 text-lg mb-10">на базе микроконтроллера Arduino</p>
+              <div className="space-y-2 text-white/60 text-base mb-10">
+                <p>Выполнил: <span className="text-white/90">[Ваше имя], группа [№ группы]</span></p>
+                <p>Преподаватель: <span className="text-white/90">[ФИО преподавателя]</span></p>
+              </div>
+              <div className="flex gap-2 flex-wrap justify-center">
+                {["Arduino Uno", "DHT11", "HC-SR04", "Реле", "C++"].map((t) => (
+                  <span key={t} className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white/50 text-sm">{t}</span>
+                ))}
               </div>
             </div>
           )}
@@ -508,23 +503,13 @@ if (temp > 28) {
 
           {/* ── СЛАЙД 12: Спасибо ── */}
           {current === 11 && (
-            <div className="text-center py-4">
-              <div className="grid grid-cols-3 gap-3 mb-8 max-w-2xl mx-auto">
-                <div className="rounded-xl overflow-hidden border border-white/10 col-span-2 h-52">
-                  <img src={PHOTOS.assembled1} alt="Устройство" className="w-full h-full object-cover" />
-                </div>
-                <div className="space-y-3">
-                  <div className="rounded-xl overflow-hidden border border-white/10 h-24">
-                    <img src={PHOTOS.green_led} alt="Зелёный LED" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="rounded-xl overflow-hidden border border-white/10 h-24">
-                    <img src={PHOTOS.red_led1} alt="Красный LED" className="w-full h-full object-cover" />
-                  </div>
-                </div>
+            <div className="flex flex-col items-center justify-center min-h-[500px] text-center">
+              <div className="w-20 h-20 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-8">
+                <Icon name="Cpu" size={36} className="text-blue-400" />
               </div>
               <h2 className="text-6xl font-bold mb-4">Спасибо за внимание!</h2>
-              <p className="text-white/40 text-xl mb-6">Вопросы приветствуются</p>
-              <p className="text-white/30 text-sm mb-6">Проект «Умный дом на Arduino» · 2026</p>
+              <p className="text-white/40 text-xl mb-4">Вопросы приветствуются</p>
+              <p className="text-white/25 text-sm mb-10">Проект «Умный дом на Arduino» · 2026</p>
               <div className="flex justify-center gap-3 flex-wrap">
                 {["Arduino Uno R3", "DHT11", "HC-SR04", "Реле", "C++", "Arduino IDE"].map((t) => (
                   <span key={t} className="px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm">{t}</span>
