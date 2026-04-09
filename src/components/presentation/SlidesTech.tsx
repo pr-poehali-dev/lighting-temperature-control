@@ -14,8 +14,8 @@ interface Props {
 export default function SlidesTech({ current }: Props) {
   return (
     <>
-      {/* ── СЛАЙД 9: Схема подключения ── */}
-      {current === 8 && (
+      {/* ── СЛАЙД 10: Схема подключения ── */}
+      {current === 9 && (
         <div>
           <h2 className="text-4xl font-bold mb-6 text-center">Схема подключения</h2>
           <div className="grid grid-cols-2 gap-6">
@@ -70,8 +70,8 @@ export default function SlidesTech({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 10: Принцип работы ── */}
-      {current === 9 && (
+      {/* ── СЛАЙД 11: Принцип работы ── */}
+      {current === 10 && (
         <div>
           <h2 className="text-4xl font-bold mb-6 text-center">Принцип работы</h2>
           <div className="grid grid-cols-2 gap-6 mb-4">
@@ -119,8 +119,8 @@ export default function SlidesTech({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 11: Программный код ── */}
-      {current === 10 && (
+      {/* ── СЛАЙД 12: Программный код ── */}
+      {current === 11 && (
         <div>
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-4xl font-bold">Программный код</h2>
@@ -187,8 +187,8 @@ if (temp > 28) {
         </div>
       )}
 
-      {/* ── СЛАЙД 12: Результаты тестирования ── */}
-      {current === 11 && (
+      {/* ── СЛАЙД 13: Результаты тестирования ── */}
+      {current === 12 && (
         <div>
           <h2 className="text-4xl font-bold mb-6 text-center">Результаты тестирования</h2>
           <div className="grid grid-cols-2 gap-6">

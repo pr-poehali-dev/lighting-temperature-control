@@ -285,8 +285,51 @@ export default function SlidesEarly({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 8: Комплектация ── */}
-      {current === 7 && (
+      {/* ── СЛАЙД 7: Риски и пути устранения ── */}
+      {current === 6 && (
+        <div>
+          <h2 className="text-4xl font-bold mb-6 text-center">Риски и пути устранения</h2>
+          <div className="rounded-2xl overflow-hidden border border-white/10 mb-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-white/10 text-white/50">
+                  <th className="px-4 py-3 text-left font-medium w-1/2">Риск</th>
+                  <th className="px-4 py-3 text-left font-medium w-1/2">Путь устранения</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { risk: "Поломка датчика при неправильном подключении", fix: "Проверять схему перед подачей питания, использовать макетную плату", color: "#ef4444" },
+                  { risk: "Ошибки в программном коде", fix: "Пошаговая отладка, вывод данных в монитор порта", color: "#f59e0b" },
+                  { risk: "Датчик DHT11 не читается", fix: "Проверить подключение (+ на 5V, out на D2, − на GND), установить библиотеку DHT.h", color: "#f59e0b" },
+                  { risk: "Реле срабатывает наоборот", fix: "Поменять в коде LOW на HIGH (или наоборот)", color: "#a855f7" },
+                  { risk: "Нехватка времени", fix: "Чёткое планирование по дням, выполнение этапов в срок", color: "#3b82f6" },
+                  { risk: "Долгая доставка компонентов", fix: "Заказать набор заранее или купить в локальном магазине", color: "#3b82f6" },
+                ].map((row, i) => (
+                  <tr key={i} className="border-t border-white/5 hover:bg-white/5 transition-colors">
+                    <td className="px-4 py-3">
+                      <div className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: row.color }} />
+                        <span className="text-white/75">{row.risk}</span>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-white/55">{row.fix}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
+            <p className="text-white/60 text-sm">
+              <span className="text-green-400 font-semibold">Вывод: </span>
+              Все риски учтены на этапе планирования. Большинство можно предотвратить или быстро устранить с помощью проверки подключения, отладки кода и своевременного выполнения задач.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* ── СЛАЙД 9: Комплектация ── */}
+      {current === 8 && (
         <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-4xl font-bold">Комплектация набора</h2>
