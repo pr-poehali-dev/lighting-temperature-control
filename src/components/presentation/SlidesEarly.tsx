@@ -151,8 +151,72 @@ export default function SlidesEarly({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 5: Комплектация ── */}
+      {/* ── СЛАЙД 5: Команда и роли ── */}
       {current === 4 && (
+        <div>
+          <h2 className="text-4xl font-bold mb-2 text-center">Команда и роли</h2>
+          <p className="text-white/40 text-center text-sm font-mono mb-8">Проект выполняется индивидуально · 1 человек</p>
+
+          <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="p-6 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center shrink-0">
+                  <Icon name="User" size={24} className="text-blue-400" />
+                </div>
+                <div>
+                  <p className="font-bold text-white text-lg">Тюнин Алексей</p>
+                  <p className="text-blue-400 text-sm font-mono">Разработчик</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                {[
+                  "Изучение компонентов и документации",
+                  "Разработка электрической схемы",
+                  "Написание программного кода",
+                  "Сборка прототипа на макетной плате",
+                  "Тестирование и отладка",
+                  "Оформление презентации",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-white/70">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
+                  <Icon name="GraduationCap" size={24} className="text-white/60" />
+                </div>
+                <div>
+                  <p className="font-bold text-white text-lg">Кардапольцева У.С.</p>
+                  <p className="text-white/40 text-sm font-mono">Консультант (преподаватель)</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                {[
+                  "Проверка хода работы",
+                  "Ответы на вопросы",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-white/70">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/30 shrink-0" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+            <p className="text-white/40 text-sm">Все этапы проекта от изучения до сдачи выполняются одним разработчиком</p>
+          </div>
+        </div>
+      )}
+
+      {/* ── СЛАЙД 6: Комплектация ── */}
+      {current === 5 && (
         <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-4xl font-bold">Комплектация набора</h2>

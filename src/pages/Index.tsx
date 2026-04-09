@@ -6,7 +6,7 @@ import SlidesLate from "@/components/presentation/SlidesLate";
 
 export default function Index() {
   const [current, setCurrent] = useState(0);
-  const total = 13;
+  const total = 14;
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1));
   const next = () => setCurrent((c) => Math.min(total - 1, c + 1));
