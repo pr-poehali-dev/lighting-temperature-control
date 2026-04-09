@@ -7,8 +7,8 @@ interface Props {
 export default function SlidesLate({ current }: Props) {
   return (
     <>
-      {/* ── СЛАЙД 11: Экономическая эффективность ── */}
-      {current === 10 && (
+      {/* ── СЛАЙД 13: Экономическая эффективность ── */}
+      {current === 12 && (
         <div>
           <h2 className="text-4xl font-bold mb-8 text-center">Экономическая эффективность</h2>
           <div className="grid grid-cols-2 gap-6">
@@ -63,8 +63,8 @@ export default function SlidesLate({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 12: Возможности расширения ── */}
-      {current === 11 && (
+      {/* ── СЛАЙД 14: Возможности расширения ── */}
+      {current === 13 && (
         <div>
           <h2 className="text-4xl font-bold mb-3 text-center">Возможности расширения</h2>
           <p className="text-white/40 text-center text-sm mb-7">В наборе уже есть компоненты для дальнейшего развития системы</p>
@@ -93,8 +93,8 @@ export default function SlidesLate({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 13: Заключение ── */}
-      {current === 12 && (
+      {/* ── СЛАЙД 15: Заключение ── */}
+      {current === 14 && (
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-bold mb-10 text-center">Заключение</h2>
           <div className="space-y-3">
@@ -114,8 +114,8 @@ export default function SlidesLate({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 14: Спасибо ── */}
-      {current === 13 && (
+      {/* ── СЛАЙД 16: Спасибо ── */}
+      {current === 15 && (
         <div className="flex flex-col items-center justify-center min-h-[500px] text-center">
           <div className="w-20 h-20 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-8">
             <Icon name="Cpu" size={36} className="text-blue-400" />

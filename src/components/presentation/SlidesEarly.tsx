@@ -215,8 +215,78 @@ export default function SlidesEarly({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 6: Комплектация ── */}
+      {/* ── СЛАЙД 6: Целевая аудитория ── */}
       {current === 5 && (
+        <div>
+          <h2 className="text-4xl font-bold mb-6 text-center">Целевая аудитория</h2>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              {
+                icon: "Users",
+                color: "#3b82f6",
+                title: "Демографические признаки",
+                items: [
+                  "Возраст: 16–22 года",
+                  "Пол: мужчины и женщины",
+                  "Семейное положение: не в браке",
+                  "Уровень дохода: низкий (до 15 000 ₽)",
+                ],
+              },
+              {
+                icon: "GraduationCap",
+                color: "#a855f7",
+                title: "Социальные признаки",
+                items: [
+                  "Сфера деятельности: студенты",
+                  "Образование: неоконченное среднее специальное",
+                  "Интересы: технологии, программирование, DIY",
+                ],
+              },
+              {
+                icon: "MapPin",
+                color: "#22c55e",
+                title: "Географические признаки",
+                items: [
+                  "Город: Самара",
+                  "Учреждение: Колледж МВЕК",
+                  "Локация: одна учебная группа",
+                ],
+              },
+              {
+                icon: "Sparkles",
+                color: "#f59e0b",
+                title: "Психологические признаки",
+                items: [
+                  "Активные, любознательные",
+                  "Любят делать вещи своими руками",
+                  "Хотят сэкономить бюджет",
+                  "Ищут практическое применение знаний",
+                ],
+              },
+            ].map((block, i) => (
+              <div key={i} className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: block.color + "22" }}>
+                    <Icon name={block.icon} size={16} style={{ color: block.color }} />
+                  </div>
+                  <p className="font-semibold text-white text-sm">{block.title}</p>
+                </div>
+                <div className="space-y-1.5">
+                  {block.items.map((item, j) => (
+                    <div key={j} className="flex items-start gap-2 text-sm text-white/65">
+                      <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: block.color }} />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── СЛАЙД 8: Комплектация ── */}
+      {current === 7 && (
         <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-4xl font-bold">Комплектация набора</h2>
