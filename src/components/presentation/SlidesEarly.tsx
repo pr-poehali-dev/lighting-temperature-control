@@ -104,8 +104,55 @@ export default function SlidesEarly({ current }: Props) {
         </div>
       )}
 
-      {/* ── СЛАЙД 4: Комплектация ── */}
+      {/* ── СЛАЙД 4: Сроки реализации ── */}
       {current === 3 && (
+        <div>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-4xl font-bold">Сроки реализации проекта</h2>
+            <span className="px-4 py-2 rounded-xl bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-mono">
+              1 марта – 24 марта 2026
+            </span>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-white/10 mb-5">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-white/10 text-white/50">
+                  <th className="px-4 py-2.5 text-left font-medium w-8">№</th>
+                  <th className="px-4 py-2.5 text-left font-medium">Мероприятие</th>
+                  <th className="px-4 py-2.5 text-left font-medium">Срок</th>
+                  <th className="px-4 py-2.5 text-left font-medium">Соответствие задачам</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { n: 1, name: "Изучение датчиков DHT11 и HC-SR04", date: "1–5 марта", task: "Задача №1", color: "#3b82f6" },
+                  { n: 2, name: "Разработка электрической схемы", date: "6–7 марта", task: "Задача №2", color: "#a855f7" },
+                  { n: 3, name: "Написание кода в Arduino IDE", date: "8–12 марта", task: "Задача №3", color: "#f59e0b" },
+                  { n: 4, name: "Сборка прототипа на макетной плате", date: "13–15 марта", task: "Задача №4", color: "#22c55e" },
+                  { n: 5, name: "Тестирование и отладка", date: "16–18 марта", task: "Задача №5", color: "#22c55e" },
+                  { n: 6, name: "Оценка экономической эффективности", date: "19–20 марта", task: "Задача №6", color: "#ef4444" },
+                  { n: 7, name: "Оформление презентации", date: "21–24 марта", task: "—", color: "#ffffff" },
+                ].map((row) => (
+                  <tr key={row.n} className="border-t border-white/5 hover:bg-white/5 transition-colors">
+                    <td className="px-4 py-2.5 text-white/30 font-mono text-xs">{row.n}</td>
+                    <td className="px-4 py-2.5 text-white/80">{row.name}</td>
+                    <td className="px-4 py-2.5 font-mono text-xs" style={{ color: row.color }}>{row.date}</td>
+                    <td className="px-4 py-2.5">
+                      <span className="px-2 py-0.5 rounded text-xs" style={{ background: row.color + "22", color: row.color }}>{row.task}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
+            <p className="text-white/60 text-sm">Все мероприятия направлены на достижение цели проекта — создание работающего прототипа системы «Умный дом» к <span className="text-blue-400 font-semibold">24 марта 2026 года</span>.</p>
+          </div>
+        </div>
+      )}
+
+      {/* ── СЛАЙД 5: Комплектация ── */}
+      {current === 4 && (
         <div>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-4xl font-bold">Комплектация набора</h2>
