@@ -75,24 +75,26 @@ export default function SlidesEarly({ current }: Props) {
       {current === 2 && (
         <div className="grid grid-cols-2 gap-8">
           <div>
-            <h2 className="text-4xl font-bold mb-6">Цель проекта</h2>
+            <h2 className="text-4xl font-bold mb-2">Цель проекта</h2>
+            <p className="text-white/40 text-xs font-mono mb-4">по SMART-технологии</p>
             <div className="p-6 rounded-2xl bg-blue-500/10 border border-blue-500/30">
-              <p className="text-white/90 text-lg leading-relaxed">
-                Разработать и собрать работающий прототип системы автоматизации освещения и контроля температуры на базе <span className="text-blue-400 font-semibold">Arduino Uno</span>.
+              <p className="text-white/90 text-base leading-relaxed">
+                К <span className="text-blue-400 font-semibold">24 марта 2026 года</span> разработать, собрать и протестировать работающий прототип системы «Умный дом» на базе <span className="text-blue-400 font-semibold">Arduino Uno</span>, который автоматически включает свет при приближении человека (менее 50 см) и сигнализирует о превышении температуры (выше 28°C), с бюджетом не более <span className="text-blue-400 font-semibold">3000 рублей</span>.
               </p>
             </div>
           </div>
           <div>
             <h2 className="text-4xl font-bold mb-6">Задачи</h2>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {[
-                "Изучить принципы работы датчиков DHT11 и HC-SR04",
+                "Изучить принципы работы датчиков DHT11 и HC‑SR04",
                 "Разработать электрическую схему подключения",
                 "Написать программный код в среде Arduino IDE",
                 "Собрать прототип на макетной плате",
                 "Провести тестирование и оценить эффективность",
+                "Оценить экономическую эффективность по сравнению с готовыми системами",
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
+                <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
                   <span className="w-7 h-7 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center shrink-0">{i + 1}</span>
                   <p className="text-white/80 text-sm">{item}</p>
                 </div>
